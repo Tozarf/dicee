@@ -14,23 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageViewOne: UIImageView!
     @IBOutlet weak var diceImageViewTwo: UIImageView!
     
-    var leftDiceNum = 1
-    var rightDiceNum = 5
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //Setting first dice(left)to 6 and the left to 2
-
-    }
-
+    let diceVals = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
+    
     @IBAction func rollBtnPressed(_ sender: UIButton) {
         
-        diceImageViewOne.image = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")][leftDiceNum]
-        diceImageViewTwo.image = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")][rightDiceNum]
-        leftDiceNum = leftDiceNum + 1
-        rightDiceNum = rightDiceNum - 1
-        
-
-
+        diceImageViewOne.image = diceVals[Int.random(in: 0...5)]
+        diceImageViewTwo.image = diceVals[Int.random(in: 0...5)]
         
     }
     
