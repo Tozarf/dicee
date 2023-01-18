@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var diceImageViewTwo: UIImageView!
     
     let diceVals = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
-    
+  
     @IBAction func rollBtnPressed(_ sender: UIButton) {
         
         diceImageViewOne.image = diceVals[Int.random(in: 0...5)]
